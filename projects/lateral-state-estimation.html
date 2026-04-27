@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lateral vehicle dynamics state estimation project by Raveen Kumar.">
+  <title>Lateral Dynamics - State Estimation | Raveen Kumar</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Raveen Kumar home">RK</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a class="primary" href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero project-image-lateral">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Vehicle Lateral Dynamics</p>
+        <h1>Lateral Dynamics - State Estimation</h1>
+        <p class="page-copy">
+          Vehicle sideslip estimation using model-based, kinematic, washout-filtered, and SCKF approaches.
+        </p>
+        <div class="page-actions">
+          <a class="button primary" href="../index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner project-layout">
+        <div class="project-main">
+          <article class="content-card">
+            <h2>Overview</h2>
+            <p>
+              This project focused on estimating vehicle body sideslip, a key lateral dynamics state that is
+              difficult to measure directly in normal vehicle setups. The work compared model-based, kinematic,
+              washout-filtered, and SCKF approaches using measured vehicle signals while keeping detailed datasets
+              and parameter values out of the public project page.
+            </p>
+            <p>
+              The study used multiple driving manoeuvres to evaluate how each estimator behaves under steady-state
+              cornering, transient steering, low-speed motion, and higher-speed dynamics. This made the project less
+              about one perfect estimator and more about understanding where each method becomes reliable or limited.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Work Performed</h2>
+            <ul class="check-list">
+              <li>Built a bicycle-model estimator to calculate lateral velocity and body sideslip from vehicle and steering inputs.</li>
+              <li>Implemented a kinematic estimator using lateral acceleration, yaw rate, longitudinal velocity, and sensor-position corrections.</li>
+              <li>Combined model-based and kinematic estimation through a washout filter with a tunable time constant.</li>
+              <li>Compared estimator behaviour across several manoeuvre types using error trends rather than exposing full measurement data.</li>
+              <li>Implemented an SCKF workflow with vehicle states, measured outputs, steering input, process noise, and measurement noise.</li>
+              <li>Reviewed estimator sensitivity to manoeuvre type, vehicle speed, sensor drift, and tyre nonlinearity.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Key Insights</h2>
+            <ul class="check-list">
+              <li>Model-based estimation is strongest in steady-state conditions where the bicycle model assumptions remain reasonable.</li>
+              <li>Kinematic estimation can follow transient manoeuvres more naturally, but integration makes it vulnerable to drift from small sensor bias.</li>
+              <li>Washout filtering is useful because it blends the strengths of both approaches, though the filter tuning is manoeuvre dependent.</li>
+              <li>Estimator accuracy changes with vehicle speed because higher speeds can amplify the effect of steering inputs and tyre nonlinearities.</li>
+              <li>A single estimator setting is rarely optimal for every manoeuvre, so validation across multiple driving cases is essential.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Summary</h2>
+            <p>
+              The project shows that sideslip estimation is a trade-off between model confidence and measurement
+              behaviour. Model-based methods are clean and interpretable, kinematic methods capture fast changes but
+              drift, and washout filtering gives a practical bridge between them. The SCKF implementation extends the
+              work toward a more complete state estimation framework for lateral vehicle dynamics.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Placeholders for Images</h2>
+            <div class="project-visual-grid">
+              <div class="image-placeholder">
+                <strong>Estimator Architecture</strong>
+                <span>Add Simulink or block-level estimator layout.</span>
+              </div>
+              <div class="image-placeholder">
+                <strong>Manoeuvre Comparison</strong>
+                <span>Add steady-state and transient comparison plots.</span>
+              </div>
+              <div class="image-placeholder">
+                <strong>SCKF Results</strong>
+                <span>Add selected filtered sideslip result plots.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="info-card">
+            <strong>Tools</strong>
+            <span>MATLAB, Simulink</span>
+          </div>
+          <div class="info-card">
+            <strong>Methods</strong>
+            <span>Bicycle model, kinematic model, washout filter, SCKF</span>
+          </div>
+          <div class="info-card">
+            <strong>Signals</strong>
+            <span>Steering input, IMU measurements, lateral states</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Raveen Kumar</span>
+      <span><a href="../index.html">Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>

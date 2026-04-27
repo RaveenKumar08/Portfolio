@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Longitudinal vehicle dynamics slip control project by Raveen Kumar.">
+  <title>Longitudinal Dynamics - Slip Control | Raveen Kumar</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Raveen Kumar home">RK</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a class="primary" href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero project-image-slip">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Vehicle Longitudinal Dynamics</p>
+        <h1>Longitudinal Dynamics - Slip Control</h1>
+        <p class="page-copy">
+          ABS and TCS controller development for managing wheel slip during braking and traction events.
+        </p>
+        <div class="page-actions">
+          <a class="button primary" href="../index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner project-layout">
+        <div class="project-main">
+          <article class="content-card">
+            <h2>Overview</h2>
+            <p>
+              This project studied longitudinal tyre slip control for both traction and braking scenarios. The
+              work connected tyre force limits, driver input, wheel slip behaviour, and controller response to show
+              how ABS and TCS can keep the vehicle close to useful grip regions without publishing full calibration
+              values or detailed model data.
+            </p>
+            <p>
+              The simulation work used a vehicle dynamics environment with controller logic built around wheel slip
+              feedback. The core objective was to manage slip during acceleration and braking while maintaining a
+              practical balance between longitudinal force generation, stability, and steerability.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Work Performed</h2>
+            <ul class="check-list">
+              <li>Reviewed the longitudinal force and lateral force trade-off using the tyre friction circle concept.</li>
+              <li>Analysed tyre slip curves during traction and braking to identify sensible controller activation regions.</li>
+              <li>Built separate ABS and TCS activation logic using wheel slip feedback and driver pedal inputs.</li>
+              <li>Designed controller modes for P, PI, PD, and PID behaviour to compare slip regulation quality.</li>
+              <li>Implemented independent slip control logic for driven and braked wheels in the simulation model.</li>
+              <li>Investigated saturation behaviour and improved the PID loop using anti-windup and derivative filtering.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Key Insights</h2>
+            <ul class="check-list">
+              <li>Slip control is not only about acceleration or braking performance; it also helps preserve steerability by avoiding excessive use of the tyre's available longitudinal force.</li>
+              <li>P control reacts quickly but can leave steady-state error, while adding integral action improves tracking at the cost of greater tuning sensitivity.</li>
+              <li>Derivative action can reduce overshoot, but the final behaviour depends on the interaction between all controller terms and the actuator limits.</li>
+              <li>Anti-windup is important for realistic control loops because saturation can otherwise cause accumulated integral action and unwanted slip correction.</li>
+              <li>Classical tuning is useful for a starting point, but nonlinear, time-varying ABS and TCS cases need simulation-led refinement.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Summary</h2>
+            <p>
+              The project demonstrates a complete control workflow for longitudinal slip: identify the control
+              objective from tyre behaviour, define activation logic, compare controller modes, and refine the
+              loop for saturation. The final insight is that robust slip control depends on both the chosen
+              reference behaviour and the practical details of the controller implementation.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Placeholders for Images</h2>
+            <div class="project-visual-grid">
+              <div class="image-placeholder">
+                <strong>Slip Curves</strong>
+                <span>Add traction and braking slip curve comparison.</span>
+              </div>
+              <div class="image-placeholder">
+                <strong>Controller Logic</strong>
+                <span>Add ABS or TCS Simulink architecture.</span>
+              </div>
+              <div class="image-placeholder">
+                <strong>Response Comparison</strong>
+                <span>Add P, PI, PD, and PID response plots.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="info-card">
+            <strong>Tools</strong>
+            <span>MATLAB, Simulink, IPG CarMaker</span>
+          </div>
+          <div class="info-card">
+            <strong>Focus</strong>
+            <span>ABS, TCS, wheel slip control</span>
+          </div>
+          <div class="info-card">
+            <strong>Domain</strong>
+            <span>Vehicle longitudinal dynamics</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Raveen Kumar</span>
+      <span><a href="../index.html">Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>
