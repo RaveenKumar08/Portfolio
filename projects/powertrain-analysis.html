@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Powertrain analysis project by Raveen Kumar.">
+  <title>Powertrain Analysis | Raveen Kumar</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Raveen Kumar home">RK</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a class="primary" href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero project-image-powertrain">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Powertrain Performance</p>
+        <h1>Powertrain Analysis</h1>
+        <p class="page-copy">
+          Experimental and analytical study of vehicle powertrain behaviour using vehicle's track test data.
+        </p>
+        <div class="page-actions">
+          <a class="button primary" href="../index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner project-layout">
+        <div class="project-main">
+          <article class="content-card">
+            <h2>Overview</h2>
+            <p>
+              This project analysed the powertrain performance of a Volvo S90 D5 AWD Geartronic using track test data. The test was done for coast-down and acceleration manoeuvres, with the goal of understanding the vehicle's powertrain behaviour and performance characteristics. The analysis involved filtering and processing the test data, applying theoretical models to estimate powertrain parameters, and evaluating the results in the context of vehicle dynamics and efficiency.
+              The work connected vehicle dynamics,
+              transmission behaviour, and energy efficiency into a compact powertrain performance study.
+            </p>
+          </article>
+
+          <article class="content-card challenge-card">
+            <h2>Challenges</h2>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>Noisy track-test data</h3>
+                <p><strong>Challenge:</strong> Coast-down and acceleration runs include measurement noise, changing road-load effects, and transient vehicle behaviour.</p>
+                <p><strong>Solution:</strong> Processed the test data separately for each manoeuvre, filtered the useful operating range, and compared the extracted values with vehicle dynamics theory before interpreting the results.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <h2>Summary</h2>
+            <p>
+              The project involved conducting two coast down tests at different speeds and two acceleration tests in second and third gear.
+              For coast-down tests, the vehicle was accelerated to a certain speed and shifted into neutral mode to disconnect the engine from the powertrain, which was used to calculate the rolling resistance coefficient and drag coefficient.
+              For acceleration tests, the vehicle was kept in a quasi-static driving condition of 2500 rpm, and then full throttle was applied until the vehicle shifted automatically into the next higher gear.
+              Another acceleration test was done, where the vehicle was started from a standstill and accelerated by applying full throttle and ending after the vehicle shifted into fourth gear. 
+              The acceleration test data was used to derive the maximum engine power for different gears. 
+              It also considered how CVT optimisation and hybridisation can influence efficiency, fuel use, and
+              acceleration potential.
+            </p>
+
+            <div class="engine-plot-grid" aria-label="Powertrain analysis plots">
+                <figure class="engine-plot">
+                  <img src="../Project%20files/Powertrain-analysis/C-a-vs-C-r.png" alt="Air resistance vs. rolling resistance">
+                  <figcaption>Air resistance vs. rolling resistance</figcaption>
+                </figure>
+                <figure class="engine-plot">
+                  <img src="../Project%20files/Powertrain-analysis/Engine-power.png" alt="Engine power curve">
+                  <figcaption>Engine power curve</figcaption>
+                </figure>   
+                <figure class="engine-plot">
+                  <img src="../Project%20files/Powertrain-analysis/Powertrain-diagram.png" alt="Powertrain diagram">
+                  <figcaption>Powertrain diagram</figcaption>
+                </figure>           
+              </div>
+
+          </article>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="info-card">
+            <strong>Tools</strong>
+            <span>MATLAB</span>
+          </div>
+          <div class="info-card">
+            <strong>Focus</strong>
+            <span>Powertrain diagram, Acceleration analysis, Coast-down analysis</span>
+          </div>
+        </aside>
+      </div>
+      <div class="project-bottom-actions">
+        <a class="button secondary" href="../index.html#projects">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Raveen Kumar</span>
+      <span><a href="../index.html">Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Volvo S90 vehicle modelling and validation project by Raveen Kumar.">
+  <title>Volvo S90 Vehicle Modelling | Raveen Kumar</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Raveen Kumar home">RK</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a class="primary" href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero project-image-volvo">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Vehicle Modelling and Validation</p>
+        <h1>Volvo S90 Vehicle Modelling</h1>
+        <p class="page-copy">
+          Multi-body vehicle model development and validation using ADAMS Car and MATLAB.
+        </p>
+        <div class="page-actions">
+          <a class="button primary" href="../index.html#projects">Back to Projects</a>
+          <a class="button secondary" href="../index.html#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner project-layout">
+        <div class="project-main">
+          <article class="content-card">
+            <h2>Overview</h2>
+            <p>
+              This project developed and validated a Volvo S90 vehicle dynamics model using ADAMS Car for
+              multi-body simulation and MATLAB for analytical bicycle-model comparison. The work covered
+              suspension, steering, tyre, brake, powertrain, and full-vehicle assembly setup, followed by
+              validation against VBOX track-test data from manoeuvres such as step steer, ramp steer, slalom,
+              and double lane change.
+            </p>
+            <p>
+              The model was used to study roll, yaw, and lateral acceleration behaviour, tune tyre parameters,
+              and evaluate how mass and centre-of-gravity changes influence vehicle handling response.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Work Performed</h2>
+            <ul class="check-list">
+              <li>Created ADAMS Car templates, subsystems, and assemblies for the Volvo S90 vehicle model.</li>
+              <li>Modelled front double wishbone and rear multi-link suspension assemblies with anti-roll bars.</li>
+              <li>Ran parallel and opposite wheel-travel tests and compared wheel-force results with analytical calculations.</li>
+              <li>Built a MATLAB bicycle model with linear and non-linear tyre representations for reference validation.</li>
+              <li>Preprocessed VBOX measurement data and used it as driver input for ADAMS and MATLAB simulations.</li>
+              <li>Validated roll rate, roll angle, lateral acceleration, and yaw rate across steering manoeuvres.</li>
+              <li>Tuned MATLAB tyre stiffness values and ADAMS tyre scaling factors to improve model correlation.</li>
+              <li>Performed a parameter study on vehicle mass and centre-of-gravity position using the validated model.</li>
+            </ul>
+          </article>
+
+          <article class="content-card challenge-card">
+            <h2>Challenges</h2>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>Correlating simulation with track data</h3>
+                <p><strong>Challenge:</strong> ADAMS and MATLAB models needed to follow measured VBOX behaviour across different steering manoeuvres.</p>
+                <p><strong>Solution:</strong> Preprocessed the measurement inputs, corrected steering offsets, and tuned tyre parameters while comparing roll, yaw, and lateral acceleration trends.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Managing model complexity</h3>
+                <p><strong>Challenge:</strong> Full-vehicle MBS modelling introduces many subsystem dependencies across suspension, tyres, steering, brakes, and powertrain.</p>
+                <p><strong>Solution:</strong> Built and checked the vehicle through modular templates, subsystem tests, wheel-travel validation, and then full-vehicle assembly evaluation.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <h2>Summary</h2>
+            <p>
+              The Volvo S90 model was developed through a modular ADAMS Car workflow. Front and rear
+              suspension templates were first converted into working subsystems, combined with anti-roll bars,
+              and checked through wheel-travel simulations. The front double wishbone suspension showed close
+              agreement with analytical force estimates, while the rear multi-link assembly showed larger
+              differences because the analytical comparison used a simplified double wishbone approximation.
+            </p>
+            <p>
+              A complete vehicle assembly was then evaluated alongside a MATLAB bicycle model. VBOX test data
+              from Lunda was converted and preprocessed before being used for validation, including steering
+              offset correction and compatible input preparation for simulation. Step steer and ramp steer
+              tests confirmed that the ADAMS model captured the main roll-rate and roll-angle trends, while
+              slalom and double lane change runs were used to compare lateral acceleration and yaw response.
+            </p>
+            <p>
+              Tyre tuning was an important part of the validation process. MATLAB cornering stiffness values
+              were adjusted to improve agreement with measured data, and ADAMS tyre scaling factors were
+              studied to refine yaw and lateral acceleration response. The validated model was finally used
+              for a parameter study, showing that reduced mass increased agility but also oscillation, higher
+              mass produced smoother but slower response, higher CoG increased roll angle, and rearward CoG
+              increased yaw response with a stability trade-off.
+            </p>
+
+            <div class="Adams-grid" aria-label="Adams Car model layout">
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/FSA.png" alt="Front suspension assembly layout in ADAMS Car">
+                <figcaption>Front suspension assembly layout in ADAMS Car</figcaption>
+              </figure>
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/FSA-p.png" alt="Front suspension tested with parallel wheel travel in ADAMS Car">
+                <figcaption>Front suspension tested with parallel wheel travel in ADAMS Car</figcaption>
+              </figure>
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/FSA-o.png" alt="Front suspension tested with opposite wheel travel in ADAMS Car">
+                <figcaption>Front suspension tested with opposite wheel travel in ADAMS Car</figcaption>
+              </figure>
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/RSA.png" alt="Rear suspension assembly layout in ADAMS Car">
+                <figcaption>Rear suspension assembly layout in ADAMS Car</figcaption>
+              </figure>
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/RSA-p.png" alt="Rear suspension tested with parallel wheel travel in ADAMS Car">
+                <figcaption>Rear suspension tested with parallel wheel travel in ADAMS Car</figcaption>
+              </figure>
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/RSA-o.png" alt="Rear suspension tested with opposite wheel travel in ADAMS Car">
+                <figcaption>Rear suspension tested with opposite wheel travel in ADAMS Car</figcaption>
+              </figure>
+              <figure class="Adams-layout">
+                <img src="../Project%20files/Car-MBS-Adams/FVA.png" alt="Full vehicle assembly in ADAMS Car">
+                <figcaption>Full vehicle assembly in ADAMS Car</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="info-card">
+            <strong>Tools</strong>
+            <span>ADAMS Car, MATLAB</span>
+          </div>
+          <div class="info-card">
+            <strong>Focus</strong>
+            <span>MBS modelling, validation, tyre tuning, handling response</span>
+          </div>
+          <div class="info-card">
+            <strong>Data</strong>
+            <span>VBOX track-test data and analytical comparison</span>
+          </div>
+        </aside>
+      </div>
+      <div class="project-bottom-actions">
+        <a class="button secondary" href="../index.html#projects">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Raveen Kumar</span>
+      <span><a href="../index.html">Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>

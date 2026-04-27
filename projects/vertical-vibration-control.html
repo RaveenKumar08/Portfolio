@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vertical vehicle dynamics vibration control project by Raveen Kumar.">
+  <title>Vertical Dynamics - Vibration Control | Raveen Kumar</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Raveen Kumar home">RK</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a class="primary" href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero project-image-vertical">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Vehicle Vertical Dynamics</p>
+        <h1>Vertical Dynamics - Vibration Control</h1>
+        <p class="page-copy">
+          Ride response analysis using passive suspension, Skyhook control, and H-infinity control strategies.
+        </p>
+        <div class="page-actions">
+          <a class="button primary" href="../index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner project-layout">
+        <div class="project-main">
+          <article class="content-card">
+            <h2>Overview</h2>
+            <p>
+              This project studied vertical vehicle vibration control using passive suspension models and active
+              control concepts. The work started from simple single-degree-of-freedom dynamics and progressed toward
+              two-degree-of-freedom and half-car models, comparing how different controllers influence ride response
+              and disturbance rejection.
+            </p>
+            <p>
+              The project page keeps the public description focused on method, behaviour, and engineering insight.
+              Detailed equations, tuning constants, and full response data remain inside the report rather than being
+              exposed directly on the portfolio page.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Work Performed</h2>
+            <ul class="check-list">
+              <li>Derived and simulated single-degree-of-freedom passive suspension dynamics.</li>
+              <li>Extended the study to two-degree-of-freedom dynamics to separate sprung and unsprung mass behaviour.</li>
+              <li>Compared passive damping against PD, PID, Skyhook, and H-infinity control approaches.</li>
+              <li>Evaluated response behaviour under impulse and sinusoidal road disturbance inputs.</li>
+              <li>Built a simple half-car vertical model to include bounce and pitch behaviour.</li>
+              <li>Reviewed controller robustness by varying key suspension parameters from their nominal values.</li>
+            </ul>
+          </article>
+
+          <article class="content-card challenge-card">
+            <h2>Challenges</h2>
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <h3>Balancing comfort and tyre-road contact</h3>
+                <p><strong>Challenge:</strong> A controller that improves body comfort can still create issues in suspension travel, tyre load variation, or control effort.</p>
+                <p><strong>Solution:</strong> Compared passive, Skyhook, PID, and H-infinity responses across model fidelities and disturbance inputs instead of using one comfort metric alone.</p>
+              </div>
+              <div class="challenge-item">
+                <h3>Testing robustness to model changes</h3>
+                <p><strong>Challenge:</strong> Active suspension controllers can look strong at nominal parameters but degrade when mass or suspension values shift.</p>
+                <p><strong>Solution:</strong> Varied key suspension parameters and reviewed the response changes to understand which control approach remained most practical.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <h2>Key Insights</h2>
+            <ul class="check-list">
+              <li>Single-degree-of-freedom modelling is useful for fundamentals, but two-degree-of-freedom modelling gives a clearer view of ride comfort and tyre-road contact behaviour.</li>
+              <li>Skyhook control improved damping and remained comparatively robust when the model parameters were varied.</li>
+              <li>H-infinity control can perform strongly for targeted response requirements, but it is more sensitive to model mismatch.</li>
+              <li>Impulse and sinusoidal road inputs reveal different strengths, so controller selection depends on the disturbance type being prioritised.</li>
+              <li>Controller gains need a practical balance: too little damping is ineffective, while excessive gain can create saturation or control-effort issues.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Summary</h2>
+            <p>
+              The project builds a clear path from passive suspension fundamentals to active vibration control.
+              Skyhook control stood out as a practical and robust damping strategy, while H-infinity control showed
+              the strengths and trade-offs of a more model-dependent design. The main learning was how model fidelity,
+              disturbance type, and controller sensitivity shape vertical dynamics performance.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Screenshots</h2>
+            <div class="report-figure-grid three" aria-label="Vertical vibration control report screenshots">
+              <figure class="report-figure contain">
+                <img src="../Project%20files/Vertical-dynamics/vertical-half-car-model.jpg" alt="Half-car vertical vibration model with sensors, actuators, and controller feedback">
+                <figcaption>Half-car model showing bounce, pitch, actuator forces, and controller feedback paths</figcaption>
+              </figure>
+              <figure class="report-figure contain">
+                <img src="../Project%20files/Vertical-dynamics/vertical-impulse-response.png" alt="Impulse response comparison for passive, Skyhook, and H-infinity vertical vibration control">
+                <figcaption>Impulse response comparison for passive, Skyhook, and H-infinity control</figcaption>
+              </figure>
+              <figure class="report-figure contain">
+                <img src="../Project%20files/Vertical-dynamics/vertical-robustness-force-feedback.png" alt="H-infinity actuator force feedback response after suspension parameter variation">
+                <figcaption>H-infinity actuator force feedback under varied suspension parameters</figcaption>
+              </figure>
+            </div>
+          </article>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="info-card">
+            <strong>Tools</strong>
+            <span>MATLAB, Simulink</span>
+          </div>
+          <div class="info-card">
+            <strong>Controllers</strong>
+            <span>PD, PID, Skyhook, H-infinity</span>
+          </div>
+          <div class="info-card">
+            <strong>Models</strong>
+            <span>1 DOF, 2 DOF, and half-car vertical models</span>
+          </div>
+        </aside>
+      </div>
+      <div class="project-bottom-actions">
+        <a class="button secondary" href="../index.html#projects">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Raveen Kumar</span>
+      <span><a href="../index.html">Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>

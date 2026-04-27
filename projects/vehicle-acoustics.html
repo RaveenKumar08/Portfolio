@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vehicle acoustics and vibrations project by Raveen Kumar.">
+  <title>Vehicle Acoustics | Raveen Kumar</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="../index.html" aria-label="Raveen Kumar home">RK</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#projects">Projects</a>
+        <a class="primary" href="../index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero project-image-acoustics">
+      <div class="page-hero-inner">
+        <p class="eyebrow">Vehicle Acoustics and Vibrations</p>
+        <h1>Vehicle Acoustics</h1>
+        <p class="page-copy">
+          Fluid-structure interaction study of cabin acoustic modes, firewall dynamics, and forced response.
+        </p>
+        <div class="page-actions">
+          <a class="button primary" href="../index.html#projects">Back to Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner project-layout">
+        <div class="project-main">
+          <article class="content-card">
+            <h2>Overview</h2>
+            <p>
+              This project studied a simplified body-in-white acoustic cavity using MATLAB-based modal analysis.
+              The work examined uncoupled and coupled eigenfrequencies, then moved into forced response studies
+              to understand how firewall and rear-door dynamics influence sound pressure level at the driver's ear.
+            </p>
+            <p>
+              The page summarises the engineering conclusions from the assignment while keeping the full equation
+              derivations and detailed MATLAB output inside the linked reports.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h2>Work Performed</h2>
+            <ul class="check-list">
+              <li>Analysed uncoupled acoustic and structural eigenmodes for the passenger compartment, firewall, and rear door.</li>
+              <li>Studied coupled fluid-structure modes for the firewall-only case and for the firewall plus rear-door case.</li>
+              <li>Identified zero-pressure locations and dominant acoustic and structural modal participation factors.</li>
+              <li>Evaluated forced response using SPL at the driver's ear and displacement response of the firewall.</li>
+              <li>Varied firewall thickness to study the interaction between mass, bending stiffness, frequency shift, and SPL response.</li>
+              <li>Compared firewall-only response with firewall and rear-door coupled response to understand persistent structural mode contributions.</li>
+            </ul>
+          </article>
+
+          <article class="content-card">
+            <h2>Key Results</h2>
+            <ul class="check-list">
+              <li>The first non-zero uncoupled acoustic eigenfrequency was 87.3508 Hz, with a zero-pressure location at 0.9831 m from the firewall.</li>
+              <li>Coupling the firewall shifted the first modes to 78.8352 Hz, 96.2712 Hz, and 132.0254 Hz because the fluid adds effective inertia to the structure.</li>
+              <li>Adding the rear door produced coupled modes at 75.36 Hz, 87.328 Hz, and 100.2031 Hz, with firewall mode 67 and rear-door mode 72 appearing persistently.</li>
+              <li>The firewall forced-response case had first acoustic peaks near 78.85 Hz and 96.3 Hz, with a highest SPL case around 135 dB at 349.875 Hz.</li>
+              <li>Reducing firewall thickness lowered BIW mass to 86.8664 kg and raised the peak SPL, while increasing thickness raised BIW mass to 99.1124 kg and shifted response peaks upward.</li>
+              <li>The rear-door study showed that structural modes 67 and 72 remained important across both low-frequency acoustic peaks and the maximum SPL case.</li>
+            </ul>
+
+            <div class="report-figure-grid three" aria-label="Vehicle acoustics analysis figures">
+              <figure class="report-figure">
+                <img src="../Project%20files/Vehicle-acoustics/vehicle-acoustics-eigenmodes.jpg" alt="Uncoupled acoustic pressure and firewall eigenmode plots">
+                <figcaption>Uncoupled acoustic pressure and firewall eigenmode results</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="../Project%20files/Vehicle-acoustics/vehicle-acoustics-spl.png" alt="SPL and firewall displacement plots for the coupled firewall response">
+                <figcaption>Coupled firewall SPL, pressure, and modal participation results</figcaption>
+              </figure>
+              <figure class="report-figure">
+                <img src="../Project%20files/Vehicle-acoustics/vehicle-acoustics-fw-rd-response.png" alt="Coupled firewall and rear door forced response plots">
+                <figcaption>Firewall and rear-door coupled response around 74 Hz</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="content-card">
+            <h2>Summary</h2>
+            <p>
+              The study showed how strongly cabin acoustics depend on structural coupling. The uncoupled acoustic
+              modes provide a useful baseline, but adding firewall and rear-door flexibility shifts the response,
+              changes zero-pressure locations, and introduces persistent structural modes. Firewall thickness also
+              changes the balance between mass and stiffness, so NVH design needs both modal participation and SPL
+              response rather than frequency targets alone.
+            </p>
+          </article>
+        </div>
+
+        <aside class="project-sidebar">
+          <div class="info-card">
+            <strong>Tools</strong>
+            <span>MATLAB, modal analysis scripts</span>
+          </div>
+          <div class="info-card">
+            <strong>Focus</strong>
+            <span>NVH, acoustic cavity modes, fluid-structure interaction, forced response</span>
+          </div>
+          <div class="info-card">
+            <strong>Model</strong>
+            <span>Passenger compartment, firewall, rear door, truncated modal basis</span>
+          </div>
+          <div class="info-card">
+            <strong>Assignment</strong>
+            <span><a class="inline-link" href="../Project%20reports/Vehicle-acoustics/Home-Assignment.pdf" target="_blank" rel="noreferrer">Open Questions</a></span>
+          </div>
+        </aside>
+      </div>
+      <div class="project-bottom-actions">
+        <a class="button secondary" href="../index.html#projects">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>&copy; 2026 Raveen Kumar</span>
+      <span><a href="../index.html">Home</a></span>
+    </div>
+  </footer>
+</body>
+</html>
